@@ -1,5 +1,7 @@
 # aws-xray-clj
 
+[![Build Status](https://travis-ci.org/jaakkos/clj-aws-xray.svg?branch=master)](https://travis-ci.org/jaakkos/clj-aws-xray)
+
 Clojure wrapper for Amazon X-Ray https://aws.amazon.com/xray/
 
 ## Installation
