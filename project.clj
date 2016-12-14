@@ -1,4 +1,4 @@
-(defproject org.clojars.jaakkos/clj-aws-xray "0.0.1"
+(defproject org.clojars.jaakkos/clj-aws-xray "0.0.3"
   :description "Clojure wrapper for AWS X-Ray"
   :url "https://github.com/jaakkos/clj-aws-xray"
   :license {:name "Eclipse Public License"
@@ -8,6 +8,8 @@
                  [com.amazonaws/aws-xray-recorder-sdk-core "1.0.0-beta"]
                  [com.amazonaws/aws-xray-recorder-sdk-aws-sdk "1.0.0-beta"]
                  [com.amazonaws/aws-xray-recorder-sdk-aws-sdk-instrumentor "1.0.0-beta"]
+                 [com.amazonaws/aws-xray-recorder-sdk-apache-http "1.0.0-beta"]
+                 [com.amazonaws/aws-xray-recorder-sdk-sql-postgres "1.0.0-beta"]
                  [com.amazonaws/aws-java-sdk-xray "1.11.64"]]
   :aliases {"test-all" ["with-profile" "default:+1.8:+1.9" "test"]}
   :profiles

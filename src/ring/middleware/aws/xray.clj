@@ -12,4 +12,5 @@
   ([handler] (wrap-xray-segment handler {:segment "nameless-segment"}))
   ([handler options]
    (fn [request]
-     (wrap-to-segment (:segment options) #(handler request)))))
+     (wrap-to-segment (:segment options) handler request))))
+

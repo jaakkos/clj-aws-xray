@@ -4,14 +4,19 @@
             [ring.util.response :refer [response]]
             [ring.middleware.aws.xray :refer :all])
   (:import [com.amazonaws.xray AWSXRayRecorder AWSXRay]
+           [com.amazonaws.xray.emitters Emitter]
            [org.mockito Mockito]))
 
+(def ^:dynamic *mocked-emitter* nil)
 (def ^:dynamic *mocked-recorder* nil)
 
 (defn set-global-recorder [f]
-  (let [recorder (AWSXRayRecorder.)
+  (let [emitter (Mockito/mock Emitter)
+        recorder (AWSXRayRecorder.)
         mock-xray-recorder (Mockito/spy recorder)]
-    (binding [*mocked-recorder* mock-xray-recorder]
+    (binding [*mocked-recorder* mock-xray-recorder
+              *mocked-emitter* emitter]
+      (.setEmitter *mocked-recorder* emitter)
       (AWSXRay/setGlobalRecorder *mocked-recorder*)
       (f))))
 
