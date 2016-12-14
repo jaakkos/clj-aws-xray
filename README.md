@@ -6,7 +6,8 @@ Clojure wrapper for Amazon X-Ray https://aws.amazon.com/xray/
 
 ## Installation
 
-Comming soon..
+[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.jaakkos/clj-aws-xray.svg)](https://clojars.org/org.clojars.jaakkos/clj-aws-xray)
+
 
 ## Usage
 

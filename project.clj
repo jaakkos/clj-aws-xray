@@ -1,6 +1,6 @@
-(defproject clj-aws-xray "0.1.0-SNAPSHOT"
+(defproject org.clojars.jaakkos/clj-aws-xray "0.0.1"
   :description "Clojure wrapper for AWS X-Ray"
-  :url "http://example.com/FIXME"
+  :url "https://github.com/jaakkos/clj-aws-xray"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.8.0"]
@@ -14,4 +14,11 @@
   {:dev {:dependencies [[ring/ring-mock "0.3.0"]
                         [org.mockito/mockito-core "2.3.0"]]}
    :1.8 {:dependencies [[org.clojure/clojure "1.8.0"]]}
-   :1.9 {:dependencies [[org.clojure/clojure "1.9.0-alpha10"]]}})
+   :1.9 {:dependencies [[org.clojure/clojure "1.9.0-alpha10"]]}}
+  :deploy-repositories
+  [["clojars"
+    {:password :gpg
+     :username :gpg
+     :passphrase :gpg
+     :url "https://clojars.org/repo/"}]],
+  :signing {:gpg-key "98B67CA0"})
