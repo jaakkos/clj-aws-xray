@@ -2,14 +2,14 @@
   (:import [com.amazonaws.xray AWSXRay]))
 
 (defn wrap-to-segment [segment-name fun]
-  (let [segment (AWSXRay/beginSegment segment-name)
-        response (fun)]
-    (.end segment)
+  (AWSXRay/beginSegment segment-name)
+  (let [response (fun)]
+    (AWSXRay/endSegment)
     response))
 
 (defn wrap-to-subsegment [segment-name fun]
-  (let [segement (AWSXRay/beginSubsegment segment-name)
-        response (fun)]
-    (.end segement)
+  (AWSXRay/beginSubsegment segment-name)
+  (let [response (fun)]
+    (AWSXRay/endSubsegment)
     response))
 
