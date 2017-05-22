@@ -1,4 +1,4 @@
-(defproject org.clojars.jaakkos/clj-aws-xray "0.0.3"
+(defproject org.clojars.jaakkos/clj-aws-xray "0.0.4"
   :description "Clojure wrapper for AWS X-Ray"
   :url "https://github.com/jaakkos/clj-aws-xray"
   :license {:name "Eclipse Public License"
