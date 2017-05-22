@@ -30,7 +30,7 @@ Clojure wrapper for Amazon X-Ray https://aws.amazon.com/xray/
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2017 Jaakko Suutarla
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
